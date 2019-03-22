@@ -10,6 +10,7 @@ import thrift.generated.PersonService;
 public class ThriftServer {
     public static void main(String[] args) throws Exception{
 
+
         TNonblockingServerSocket socket = new TNonblockingServerSocket(8899);
         THsHaServer.Args arg = new THsHaServer.Args(socket).minWorkerThreads(2).maxWorkerThreads(4);
         //范型就是实现的接收类

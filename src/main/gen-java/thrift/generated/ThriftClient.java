@@ -28,7 +28,7 @@ public class ThriftClient {
 
             Person person2 = new Person();
 
-            person2.setUsername("李四");
+            person2.setUsername("李无");
             person2.setAge(30);
             person2.setMarried(true);
 
