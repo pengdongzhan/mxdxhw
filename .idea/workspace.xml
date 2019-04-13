@@ -61,11 +61,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/gen-java/thrift/generated/ThriftClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="114">
+              <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/commons-cli/commons-cli/1.2/commons-cli-1.2.jar!/org/apache/commons/cli/BasicParser.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -249,59 +255,6 @@
             <path>
               <item name="mxdxhw" type="b2602c69:ProjectViewProjectNode" />
               <item name="mxdxhw" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mxdxhw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mxdxhw" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mxdxhw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mxdxhw" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="gen-java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mxdxhw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mxdxhw" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="gen-java" type="462c0819:PsiDirectoryNode" />
-              <item name="generated" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mxdxhw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mxdxhw" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="gen-java" type="462c0819:PsiDirectoryNode" />
-              <item name="generated" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mxdxhw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mxdxhw" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="gen-java" type="462c0819:PsiDirectoryNode" />
-              <item name="generated" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mxdxhw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mxdxhw" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="gen-java" type="462c0819:PsiDirectoryNode" />
-              <item name="generated" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mxdxhw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mxdxhw" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -327,7 +280,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555153426965" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555167398030" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/webapp/web/WEB-INF/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -550,7 +503,7 @@
       <workItem from="1553775279233" duration="4759000" />
       <workItem from="1555118493531" duration="6366000" />
       <workItem from="1555128629867" duration="11836000" />
-      <workItem from="1555151669996" duration="1744000" />
+      <workItem from="1555151669996" duration="3372000" />
     </task>
     <task id="LOCAL-00001" summary="3.9">
       <created>1552141702337</created>
@@ -650,11 +603,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555153257924</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="1、通过命令行的子命令&#10;2、实现用户登录、注册、查找用户信息、删除用户。">
+      <created>1555153472706</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1555153472706</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105580000" />
+    <option name="totallyTimeSpent" value="107208000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -669,7 +629,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49865952" visible="true" weight="0.26096824" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49865952" visible="true" weight="0.26096824" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -679,7 +639,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.36824876" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.21440262" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.24885496" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -688,7 +648,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49924356" weight="0.21767594" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.4729951" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015129" side_tool="true" visible="true" weight="0.36824876" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015129" side_tool="true" visible="true" weight="0.21440262" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49924356" weight="0.2667758" />
       <window_info anchor="bottom" id="Spring" order="13" weight="0.3289689" />
       <window_info anchor="bottom" id="Application Servers" order="14" weight="0.3535188" />
@@ -798,7 +758,8 @@
     <MESSAGE value="1、利用命令行在客户端进行登录、查询、删除、退出等功能；" />
     <MESSAGE value="1、实现命令行输入" />
     <MESSAGE value="1、通过控制台的菜单。&#10;2、实现用户登录、注册、查找用户信息、删除用户。" />
-    <option name="LAST_COMMIT_MESSAGE" value="1、通过控制台的菜单。&#10;2、实现用户登录、注册、查找用户信息、删除用户。" />
+    <MESSAGE value="1、通过命令行的子命令&#10;2、实现用户登录、注册、查找用户信息、删除用户。" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、通过命令行的子命令&#10;2、实现用户登录、注册、查找用户信息、删除用户。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -830,13 +791,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/thrift/libthrift/0.12.0/libthrift-0.12.0.jar!/org/apache/thrift/server/AbstractNonblockingServer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="265" selection-start-line="265" selection-end-line="265" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/thrift/libthrift/0.12.0/libthrift-0.12.0.jar!/org/apache/thrift/ProcessFunction.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
@@ -1086,13 +1040,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-cli/commons-cli/1.2/commons-cli-1.2.jar!/org/apache/commons/cli/BasicParser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/gen-java/thrift/generated/ThriftClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="114">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
