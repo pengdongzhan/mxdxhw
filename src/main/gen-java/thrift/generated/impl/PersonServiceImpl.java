@@ -126,6 +126,7 @@ public class PersonServiceImpl implements PersonService.Iface{
                     System.out.println(person.isMarried());
                 }
                 return per;
+
         } catch (Exception e) {
             // TODO Auto-generated catch block
             resResult.setMessage("系统异常！");
