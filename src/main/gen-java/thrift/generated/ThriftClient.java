@@ -1,68 +1,107 @@
 package thrift.generated;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.PropertyConfigurator;
 import org.apache.thrift.protocol.TCompactProtocol;
 import org.apache.thrift.protocol.TProtocol;
 import org.apache.thrift.transport.TFastFramedTransport;
 import org.apache.thrift.transport.TSocket;
 import org.apache.thrift.transport.TTransport;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.BasicParser;
+import org.apache.commons.cli.Options;
+import org.apache.commons.cli.CommandLine;
+import java.util.List;
 import java.util.Scanner;
-
-import thrift.generated.Person;
-import thrift.generated.PersonService;
+import thrift.generated.model.Person;
+import thrift.generated.service.PersonService;
 
 //服务端的协议和客户端的协议要一致
 public class ThriftClient {
+    public static Log log = LogFactory.getLog(ThriftClient.class);
     public static void main(String[] args) {
-
+        PropertyConfigurator.configure("E://mxdxhw/src/log4j.properties");
         TTransport tTransport = new TFastFramedTransport(new TSocket("localhost",8899),600);
         TProtocol tProtocol = new TCompactProtocol(tTransport);
         PersonService.Client client = new PersonService.Client(tProtocol);
 
+
         try{
 
             tTransport.open();
-            // 如果要从另一台启动了RMI注册服务的机器上查找hello实例
-            // HelloInterface hello =
-            // (HelloInterface)Naming.lookup("//192.168.1.105:1099/Hello");
 
-            //控制台输入提示
-            System.out.println("请选择操作");
-            System.out.println("register");
-            System.out.println("add");
-            System.out.println("query");
-            System.out.println("delete");
-            System.out.println("clear");
-            System.out.println("login");
+            // Create a Parser
+            CommandLineParser parser = new BasicParser( );
+            Options options = new Options( );
+            options.addOption("a", "adduser", false, "adduser");
+            options.addOption("o", "outuser", false, "outuser" );
+            options.addOption("i", "inuser", false, "inuser");
+            options.addOption("d", "deleteuser", false, "deleteuser");
+            options.addOption("l", "listuser", false, "listuser");
+            options.addOption("n", "name", true, "name");
+            options.addOption("p", "password", true, "password");
+            options.addOption("e", "email", true, "eamil");
+            options.addOption("m", "moblie", true, "moblie");
+            // Parse the program arguments
+            CommandLine commandLine = parser.parse( options, args );
+            // Set the appropriate variables based on supplied options
+            boolean verbose = false;
+            //  获取相关变量
+            String name = commandLine.getOptionValue('n');
+            String password =commandLine.getOptionValue('p');
+            String email = commandLine.getOptionValue('e');
+            String phone = commandLine.getOptionValue('m');
 
-            Scanner sc = null;
-            sc = new Scanner(System.in);
-            String choice = sc.nextLine();
 
-            //如果是以注册开始
-            if(choice.startsWith("regist")) {
-                System.out.println("请输入注册的用户名：");
-                String name = sc.nextLine();
-                System.out.println("请设置您的密码：");
-                int password = sc.nextInt();
+            if( commandLine.hasOption('a') ) {
                 //创建一个对象用于注册
                 Person person2 = new Person();
                 person2.setUsername(name);
-                person2.setAge(password);
-                person2.setMarried(true);
+                person2.setPassword(password);
+                person2.setEmail(email);
+                person2.setPhone(phone);
+                Person per1 = client.savePerson(person2);
+                System.out.println(per1.getResResult().getMessage());
 
-                client.savePerson(person2);
-            }else if(choice.startsWith("login")) {
-                System.out.println("请输入登录的用户名：");
-                String name = sc.nextLine();
-                System.out.println("请输入登录密码：");
-                int password = sc.nextInt();
-                //创建一个对象用于注册
-                Person person2 = new Person();
-                person2.setUsername(name);
-                person2.setAge(password);
-                person2.setMarried(false);
-
-                client.savePerson(person2);
+                System.out.println( "Help Message");
+                //  System.exit(0);
             }
+            if( commandLine.hasOption('o') ) {
+                int result;
+                System.out.println("您已登出，请重新进入系统登录login或注册register");
+            }
+            if( commandLine.hasOption('i') ) {
+
+                //创建一个对象用于登录
+                Person person2 = new Person();
+                person2.setUsername(name);
+                person2.setPassword(password);
+                Person per = client.userLogin(person2);
+                System.out.println(per.getResResult().getMessage());
+            }
+            if( commandLine.hasOption('d') ) {
+                int result;
+
+                //   System.out.println("请输入删除登录密码：");
+                //  String password = sc.nextLine();
+                //创建一个对象用于登录
+                Person person2 = new Person();
+                person2.setUsername(name);
+                //      person2.setPassword(password);
+                result = client.deletePerson(name);
+                if(result==1)
+                    System.out.println("删除用户成功");
+                else
+                    System.out.println("删除用户失败，该用户不存在");
+            }
+            if( commandLine.hasOption('l') ) {
+                List<Person> list = client.getAllPerson();
+                System.out.println("用户信息如下");
+                for (Person p :list){
+                    System.out.println("用户"+p.getUsername()+"邮箱： "+p.getEmail()+"电话  "+p.getPhone());
+                }
+            }
+
             /*     if(client.savePerson(person2))
                 {
                     System.out.println("注册成功！");
@@ -154,9 +193,10 @@ public class ThriftClient {
                     }
                 }
                 */
-                else{
-                    System.out.println("bad request!");
-                }
+            else{
+                System.out.println("bad request!");
+                log.info("bad request!");
+            }
         }catch (Exception ex){
             throw new  RuntimeException(ex.getMessage(),ex);
         }finally {
