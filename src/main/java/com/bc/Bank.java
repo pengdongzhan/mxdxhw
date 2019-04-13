@@ -5,6 +5,7 @@ public class Bank {
     // Main program
     public static void main(String[] args)
     {
+
 // Open an account for Zhang3
         Account zhang3 = new Account();
 // Deposit 500 yuan to Zhang3's account,
